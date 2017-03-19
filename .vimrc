@@ -91,7 +91,7 @@ endif
 if has('mac')
 	set term=xterm-256color
 elseif has('unix')
-	set term=dtterm
+	set term=xterm-256color
 endif
 
 
@@ -104,6 +104,9 @@ map <Down> gj
 map <M-c> "+y
 map <M-x> "+d
 map <M-v> "+p
+
+"ctrlp
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.a,*.o,*.class,*.pyc
 
 "tagbar
 let g:tagbar_left = 1
