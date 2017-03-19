@@ -1,5 +1,9 @@
 #! /bin/bash
 
+if [ ! -f "$HOME/.vimrc" ]; then
+	echo "source $HOME/vimrc/.vimrc" > $HOME/.vimrc
+fi
+
 if [ ! -d "$HOME/.vimswapdir" ]; then
   mkdir $HOME/.vimswapdir
 fi
