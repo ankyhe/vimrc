@@ -20,7 +20,6 @@ Plugin 'vim-scripts/desertEx'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-Plugin 'vim-scripts/taglist.vim'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'majutsushi/tagbar.git'
@@ -105,6 +104,9 @@ map <Down> gj
 map <M-c> "+y
 map <M-x> "+d
 map <M-v> "+p
+
+"tagbar
+let g:tagbar_left = 1
 nmap <F8> :TagbarToggle<CR>
 
 "YCM
@@ -116,8 +118,6 @@ au BufNewFile,BufRead *.py setl tabstop=4 softtabstop=4 shiftwidth=4 textwidth=7
 
 " Go
 let g:go_fmt_command = "goimports"
-au BufNewFile,BufRead *.go 
-  \ nmap <F8> :TagbarToggle<CR>
 
 " Remove spaces
 "au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.go,*.java,*.rb,*.js match BadWhitespace /\s\+$/
