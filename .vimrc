@@ -17,6 +17,7 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 Plugin 'vim-scripts/desertEx'
+Plugin 'jnurmine/Zenburn'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
@@ -61,8 +62,9 @@ set diffopt+=vertical
 set tabpagemax=20
 set foldmethod=manual
 set vb t_vb=
+set t_Co=256
 syntax on
-colo desertEx
+colo zenburn
 source $VIMRUNTIME/ftplugin/man.vim
 
 " go to last cursor
@@ -87,13 +89,6 @@ if has('gui_running')
 		set guifont=Monaco:h14
 	endif
 endif
-
-if has('mac')
-	set term=xterm-256color
-elseif has('unix')
-	set term=xterm-256color
-endif
-
 
 " Common key mapping
 map <C-m> :%s/\r//g<CR><Esc>
