@@ -25,6 +25,7 @@ Bundle 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'majutsushi/tagbar.git'
 Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plugin 'jeetsukumaran/vim-buffergator'
 
 call vundle#end()          
 filetype plugin indent on
@@ -100,6 +101,9 @@ map <M-c> "+y
 map <M-x> "+d
 map <M-v> "+p
 
+"buffergator
+let g:buffergator_viewport_split_policy="n"
+
 "ctrlp
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.a,*.o,*.class,*.pyc
 
@@ -108,7 +112,25 @@ let g:tagbar_left = 1
 nmap <F8> :TagbarToggle<CR>
 
 "YCM
-let g:ycm_autoclose_preview_window_after_completion=1
+"set completeopt=longest,menu
+let g:ycm_global_ycm_extra_conf='~/vimrc/.ycm_extra_conf.py'
+autocmd InsertLeave * if pumvisible() == 0|pclose|endif
+inoremap <expr> <CR>       pumvisible() ? "\<C-y>" : "\<CR>"
+inoremap <expr> <Down>     pumvisible() ? "\<C-n>" : "\<Down>"
+inoremap <expr> <Up>       pumvisible() ? "\<C-p>" : "\<Up>"
+inoremap <expr> <PageDown> pumvisible() ? "\<PageDown>\<C-p>\<C-n>" : "\<PageDown>"
+inoremap <expr> <PageUp>   pumvisible() ? "\<PageUp>\<C-p>\<C-n>" : "\<PageUp>"
+let g:ycm_key_list_select_completion = ['<Down>']
+let g:ycm_key_list_previous_completion = ['<Up>']
+let g:ycm_confirm_extra_conf=0
+let g:ycm_collect_identifiers_from_tags_files=1
+let g:ycm_min_num_of_chars_for_completion=2
+let g:ycm_cache_omnifunc=0
+let g:ycm_seed_identifiers_with_syntax=1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 0
+let g:ycm_key_invoke_completion = '<M-Space>'
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Python setting
