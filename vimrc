@@ -16,16 +16,19 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
+Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'vim-scripts/desertEx'
 Plugin 'jnurmine/Zenburn'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-fugitive'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/indentpython.vim'
 Plugin 'majutsushi/tagbar.git'
 Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plugin 'jeetsukumaran/vim-buffergator'
 
 call vundle#end()          
 filetype plugin indent on
@@ -101,6 +104,14 @@ map <M-c> "+y
 map <M-x> "+d
 map <M-v> "+p
 
+"air-line
+set laststatus=2
+set cmdheight=1
+let g:airline_theme="luna" 
+let g:airline_powerline_fonts=0
+let g:airline#extensions#tabline#enabled=0
+let g:airline#extensions#tabline#buffer_nr_show=0
+
 "buffergator
 let g:buffergator_viewport_split_policy="n"
 
@@ -138,7 +149,3 @@ au BufNewFile,BufRead *.py setl tabstop=4 softtabstop=4 shiftwidth=4 textwidth=7
 
 " Go
 let g:go_fmt_command = "goimports"
-
-" Remove spaces
-"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h,*.go,*.java,*.rb,*.js match BadWhitespace /\s\+$/
-
