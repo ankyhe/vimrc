@@ -24,6 +24,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'jiangmiao/auto-pairs'
 Plugin 'kien/ctrlp.vim'
 Bundle 'Valloric/YouCompleteMe'
 Plugin 'vim-scripts/indentpython.vim'
@@ -121,6 +122,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*.a,*.o,*.class,*.pyc
 "tagbar
 let g:tagbar_left = 1
 nmap <F8> :TagbarToggle<CR>
+
+"autopairs
+let g:AutoPairsFlyMode=1
 
 "YCM
 "set completeopt=longest,menu
