@@ -18,6 +18,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'vim-scripts/desertEx'
+Plugin 'vim-scripts/mayansmoke'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'jnurmine/Zenburn'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'vim-scripts/Mark--Karkat'
@@ -50,7 +52,7 @@ if v:version >= 703
 endif
 set sessionoptions+=unix,slash
 set splitbelow
-set background=dark
+set background=light
 set ruler
 set backspace=indent,eol,start
 set history=100
@@ -69,7 +71,7 @@ set foldmethod=manual
 set vb t_vb=
 set t_Co=256
 syntax on
-colo zenburn
+colo solarized
 source $VIMRUNTIME/ftplugin/man.vim
 
 " go to last cursor
