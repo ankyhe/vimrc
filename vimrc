@@ -20,6 +20,8 @@ Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'vim-scripts/desertEx'
 Plugin 'vim-scripts/mayansmoke'
 Plugin 'altercation/vim-colors-solarized'
+Plugin 'ankyhe/lilydjwg_green'
+Plugin 'vim-scripts/oceanlight'
 Plugin 'jnurmine/Zenburn'
 Plugin 'vim-scripts/mru.vim'
 Plugin 'vim-scripts/Mark--Karkat'
@@ -71,7 +73,7 @@ set foldmethod=manual
 set vb t_vb=
 set t_Co=256
 syntax on
-colo solarized
+colo lilydjwg_green
 source $VIMRUNTIME/ftplugin/man.vim
 
 " go to last cursor
