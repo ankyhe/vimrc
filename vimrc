@@ -30,10 +30,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
-Bundle 'Valloric/YouCompleteMe'
-Plugin 'vim-scripts/indentpython.vim'
 Plugin 'majutsushi/tagbar.git'
-Plugin 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 
 call vundle#end()          
 filetype plugin indent on
