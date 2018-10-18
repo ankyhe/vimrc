@@ -152,5 +152,8 @@ map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
 " Python setting
 au BufNewFile,BufRead *.py setl tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix encoding=utf-8
 
+" XML setting
+au BufNewFile,BufRead *.xml setl tabstop=2 softtabstop=2 expandtab
+
 " Go
 let g:go_fmt_command = "goimports"
