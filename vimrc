@@ -19,6 +19,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'vim-scripts/desertEx'
 Plugin 'vim-scripts/mayansmoke'
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ankyhe/lilydjwg_green'
 Plugin 'vim-scripts/oceanlight'
@@ -51,6 +52,7 @@ if v:version >= 703
 endif
 set sessionoptions+=unix,slash
 set splitbelow
+set splitright
 set background=light
 set ruler
 set backspace=indent,eol,start
@@ -109,7 +111,7 @@ map <M-v> "+p
 "air-line
 set laststatus=2
 set cmdheight=1
-let g:airline_theme="luna" 
+let g:airline_theme="light" 
 let g:airline_powerline_fonts=0
 let g:airline#extensions#tabline#enabled=0
 let g:airline#extensions#tabline#buffer_nr_show=0
