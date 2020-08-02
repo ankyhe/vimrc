@@ -32,6 +32,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar.git'
+Plugin 'junegunn/fzf.vim'
 
 call vundle#end()          
 filetype plugin indent on
@@ -150,6 +151,9 @@ let g:ycm_complete_in_strings = 1
 let g:ycm_collect_identifiers_from_comments_and_strings = 0
 let g:ycm_key_invoke_completion = '<M-Space>'
 map <leader>g  :YcmCompleter GoToDefinitionElseDeclaration<CR>
+
+"fzf
+set rtp+=~/.fzf
 
 " Python setting
 au BufNewFile,BufRead *.py setl tabstop=4 softtabstop=4 shiftwidth=4 textwidth=79 expandtab autoindent fileformat=unix encoding=utf-8
